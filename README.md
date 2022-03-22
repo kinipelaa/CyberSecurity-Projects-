@@ -1,6 +1,25 @@
+##CyberSecurity Project
+
+## Table of Contents
+* [Automated ElK Stack Deployment](#general-information)
+	*Ansible 	
+* [Description of the Topology](#topology-used)
+* [Access Policies](#features)
+* [Elk Configuration](#screenshots)
+* [Target Machines & Beats](#setup)
+* [Steps to set up ELK server](#usage)
+* [Steps to Installing filebeat](#project-status)
+* [Steps to Installing metricbeat](#room-for-improvement)
+* [Linux Bash Scripts](#acknowledgements)
+* [ADDITONAL NOTES:(#TBD)
+<!-- * [License](#license) -->
+
+- The files in this repository were used to configure the network depicted below.
+![TODO: Update the path with the name of your diagram](./Images/Diagrams/Network Topology.jpg)
+
 ## Automated ELK Stack Deployment
 
-The files in this repository were used to configure the network depicted below.
+
 
 ![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
 
