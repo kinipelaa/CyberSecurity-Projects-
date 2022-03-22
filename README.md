@@ -16,6 +16,7 @@
 
 - The files in this repository were used to configure the network depicted below.
 ![TODO: Update the path with the name of your diagram](./Images/Network Topology.jpg)
+<!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Automated ELK Stack Deployment
 
