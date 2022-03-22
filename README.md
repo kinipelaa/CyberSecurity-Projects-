@@ -15,7 +15,7 @@
 <!-- * [License](#license) -->
 
 - The files in this repository were used to configure the network depicted below.
-![TODO: ./Images/Network Topology.jpg](./Images/Network Topology.jpg)
+![TODO:./img/Network Topology.png]
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Automated ELK Stack Deployment
