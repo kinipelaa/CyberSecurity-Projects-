@@ -90,7 +90,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses                 |
 |----------|---------------------|--------------------------------------|
-| Jump Box | Yes              	 |  Workstation Public IP 99.110.222.198|
+| Jump Box | Yes              	 |  10.1.0.4/20.119.33.182              |
 | Web-1    | No                  |  10.1.0.5 on SSH 22                  |
 | Web-2    | No                  |  10.1.0.6 on SSH 22                  |
 |Elk-Server| No                  |  Workstation Public IP using TCP 5601|
@@ -240,7 +240,7 @@ output.elasticsearch:
     password: "changeme"
 
   setup.kibana:
-    host: "10.1.0.4:5601"
+    host: "10.2.0.4:5601"
   ```
 - Run the playbook, (`ansible-playbook metricbeat-playbook.yml`) and navigate to _Kibana > Add Metric Data > Docker Metrics > Module Status_ to check that the installation worked as expected.
 
