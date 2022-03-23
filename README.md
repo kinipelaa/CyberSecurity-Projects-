@@ -26,13 +26,13 @@
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml and config file may be used to install only certain pieces of it, such as Filebeat.
 
 - [Ansible Playbook](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/my-playbook1.yml)
-- [Ansible Hosts](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/Ansible/hosts)
+- [Ansible Hosts](https://github.com/kinipelaa/CybperSecurity-Projects-/blob/0b9af35307320d7ebe72e41383ee2f4906c33378/Ansible/hosts)
 - [Ansible Configuration](https://github.com/kinipelaa/CybperSecurity-Projects-/blob/0b9af35307320d7ebe72e41383ee2f4906c33378/Ansible/ansible.cfg)
-- [Ansible ELK Installation and VM Configuration](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/ELK_Stack/install-elk.yml) 
-- [Ansible Filebeat Playbook](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/ELK_Stack/filebeat-playbook.yml)
-- [Ansible Filebeat Config file](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/filebeat-config.yml)
-- [Ansible Metricbeat Playbook](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/ELK_Stack/metricbeat-paybook.yml)
-- [Ansible Metricbeat Config file](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master//Ansible/metricbeat-config.yml)
+- [Ansible ELK Installation and VM Configuration](https://github.com/kinipelaa/CybperSecurity-Projects-/blob/0b9af35307320d7ebe72e41383ee2f4906c33378/Ansible/install-elk.yml) 
+- [Ansible Filebeat Playbook](https://github.com/kinipelaa/CybperSecurity-Projects-/blob/0b9af35307320d7ebe72e41383ee2f4906c33378/Ansible/filebeat-playbook.yml)
+- [Ansible Filebeat Config file](https://github.com/kinipelaa/CybperSecurity-Projects-/blob/0b9af35307320d7ebe72e41383ee2f4906c33378/Ansible/filebeat-config.yml)
+- [Ansible Metricbeat Playbook](https://github.com/kinipelaa/CybperSecurity-Projects-/blob/0b9af35307320d7ebe72e41383ee2f4906c33378/Ansible/metricbeat-paybook.yml)
+- [Ansible Metricbeat Config file](https://github.com/kinipelaa/CybperSecurity-Projects-/blob/0b9af35307320d7ebe72e41383ee2f4906c33378/Ansible/metricbeat-config.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -166,7 +166,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker PS](./img/screenshot.png)
+![Docker PS](./img/docker_ps_output)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
