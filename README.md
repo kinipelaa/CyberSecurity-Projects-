@@ -194,34 +194,58 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
+
 - Copy the playbook file to Ansible Control Node.
 - Update the host file to include webserver and elk: /etc/ansible/hosts
 
-# This is the default ansible 'hosts' file.
-#
-# It should live in /etc/ansible/hosts
-#
-#   - Comments begin with the '#' character
-#   - Blank lines are ignored
-#   - Groups of hosts are delimited by [header] elements
-#   - You can enter hostnames or ip addresses
-#   - A hostname/IP can be a member of multiple groups
-# You need only a [webservers] and [elkservers] group.
-# List the IP Addresses of your webservers
-# You should have at least 2 IP addresses
-[webservers]
-10.0.0.4 ansible_python_interpreter=/usr/bin/python3
-10.0.0.8 ansible_python_interpreter=/usr/bin/python3
-10.0.0.9 ansible_python_interpreter=/usr/bin/python3
-# List the IP address of your ELK server
-# There should only be one IP address
-[elk]
-10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+For ELK VM Configuration: 
+- Copy the [Ansible ELK Installation and VM Configuration ](https://github.com/kinipelaa/CybperSecurity-Projects-/blob/main/Ansible/ELK_Stack/install-elk.yml) 
+- Run the playbook using this command :  `ansible-playbook install-elk.yml`
 
 - Run the playbook, and navigate to Kibana (http://my.ELK-VMExternal.IP:5601/app/kibana#/home to check that the installation worked as expected.
+For FILEBEAT:
+- Download Filebeat playbook usng this command: 
+  - `curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml`
+- Copy the  '/etc/ansible/files/filebeat-config.yml' file to  '/etc/filebeat/filebeat-playbook.yml'
+- Update the filebeat-playbook.yml file to include installer 
+  - `curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb`
+- Update the filebeat-config.yml file 
+root@c1e0a059c0b0:/etc/ansible/files# `nano filebeat-config.yml`
+```bash
+output.elasticsearch:
+  #Array of hosts to connect to.
+ hosts: ["10.1.0.4:9200"]
+  username: "elastic"
+  password: "changeme” 
 
- - Run playbook using this command : ansible-playbook filebeat-playbook.yml
-_
+ setup.kibana:
+  host: "10.1.0.4:5601"
+``
+- Run playbook using this command : 'ansible-playbook filebeat-playbook.yml'  and navigate to _Kibana > Logs : Add log data > System logs > 5:Module Status > Check data_ to check that the installation worked as expected. 
+
+For METRICBEAT: 
+- Download Metricbeat playbook using this command:
+  - `curl -L -O https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/files/metricbeat-config.yml`
+- Copy the  /etc/ansible/files/metricbeat file to  /etc/metricbeat/metricbeat-playbook.yml
+- Update the filebeat-playbook.yml file to include installer 
+  - `curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb`
+- Update the metricbeat file rename to metricbeat-config.yml 
+  
+root@c1e0a059c0b0:/etc/ansible/files# `nano metricbeat-config.yml`
+  ```bash
+output.elasticsearch:
+  #Array of hosts to connect to.
+  hosts: ["10.1.0.4:9200"]
+    username: "elastic"
+    password: "changeme"
+
+  setup.kibana:
+    host: "10.1.0.4:5601"
+  ```
+- Run the playbook, (`ansible-playbook metricbeat-playbook.yml`) and navigate to _Kibana > Add Metric Data > Docker Metrics > Module Status_ to check that the installation worked as expected.
+
+##Questions & Answers: 
+
 - _Which file is the playbook? Where do you copy it?_
   - Answer: For the ANSIBLE : We will create the my-playbook1.yml as our playbook.Playbooks are the files where Ansible code is written. Playbooks are written in YML 
 
@@ -245,7 +269,7 @@ Answer:Edit the Ansible Hosts file in this directory /etc/ansible/hosts
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 Answer:  Test Kibana on web : http://[your.ELK-VM.External.IP]:5601/app/kibana
-
+##Bonus
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
  - Run: ansible-playbook my_playbook.yml
  - Download: curl -L -O 
