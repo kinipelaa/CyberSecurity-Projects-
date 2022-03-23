@@ -27,8 +27,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 - [Ansible Playbook](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/my-playbook1.yml)
 - [Ansible Hosts](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/Ansible/hosts)
-- [Ansible Configuration](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/ansible.cfg)
-- [Ansible ELK Installation and VM Configuration](https://github.com/kinpelaa/CyberSecurity Project/blob/master/Ansible/ELK_Stack/install-elk.yml) 
+- [Ansible Configuration]https://github.com/kinipelaa/CybperSecurity-Projects-/blob/0b9af35307320d7ebe72e41383ee2f4906c33378/Ansible/ansible.cfg
+- [Ansible ELK Installation and VM Configuration](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/ELK_Stack/install-elk.yml) 
 - [Ansible Filebeat Playbook](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/ELK_Stack/filebeat-playbook.yml)
 - [Ansible Filebeat Config file](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/filebeat-config.yml)
 - [Ansible Metricbeat Playbook](https://github.com/kinpelaa/CyberSecurity-Projects/blob/master/Ansible/ELK_Stack/metricbeat-paybook.yml)
