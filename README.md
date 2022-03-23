@@ -25,8 +25,8 @@
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml and config file may be used to install only certain pieces of it, such as Filebeat.
 
-- [Ansible Playbook](https://github.com/kinpelaa/CyberSecurity Project/blob/master/Ansible/my-playbook1.yml)
-- [Ansible Hosts](https://github.com/kinpelaa/CyberSecurity Project/blob/master/Ansible/Ansible/hosts)
+- [Ansible Playbook](https://github.com/kinpelaa/CyberSecurity-Project/blob/master/Ansible/my-playbook1.yml)
+- [Ansible Hosts](https://github.com/kinpelaa/CyberSecurity-Project/blob/master/Ansible/Ansible/hosts)
 - [Ansible Configuration](https://github.com/kinpelaa/CyberSecurity Project/blob/master/Ansible/ansible.cfg)
 - [Ansible ELK Installation and VM Configuration](https://github.com/kinpelaa/CyberSecurity Project/blob/master/Ansible/ELK_Stack/install-elk.yml) 
 - [Ansible Filebeat Playbook](https://github.com/kinpelaa/CyberSecurity Project/blob/master/Ansible/ELK_Stack/filebeat-playbook.yml)
